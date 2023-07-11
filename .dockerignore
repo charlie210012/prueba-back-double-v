@@ -1,0 +1,9 @@
+vendor
+node_modules
+.dockerignore
+.docker
+.git
+.gitignore
+.dockerignore
+.env
+.env.example
