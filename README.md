@@ -6,6 +6,12 @@
 
 3. Corre el comando php artisa migrate 
 
+4. Corre los comandos  
+   php artisan lighthouse:ide-helper
+   php artisan vendor:publish --provider="Nuwave\Lighthouse\LighthouseServiceProvider"
+    php artisan lighthouse:print-schema > schema.graphql
+
+
 Nota: Asegurate de modificar el .env para la configuracion de tu base de datos
 
 ## Instalar con Docker
