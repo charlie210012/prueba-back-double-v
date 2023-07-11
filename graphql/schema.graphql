@@ -1,0 +1,20 @@
+type Ticket {
+  id: ID!
+  user: String!
+  ticket: String!
+  createdAt: String! @rename(attribute: "created_at")
+  updatedAt: String! @rename(attribute: "updated_at")
+  status: String!
+}
+
+
+type Query {
+  tickets: [Ticket!]! @paginate(defaultCount: 10)
+  ticket(id: ID! @eq): Ticket @find
+}
+
+type Mutation {
+  createTicket(user: String!, status: String!, ticket:String!): Ticket! @create
+  updateTicket(id: ID!, user: String!, status: String!, ticket:String!): Ticket! @update
+  deleteTicket(id: ID!): ID!
+}
